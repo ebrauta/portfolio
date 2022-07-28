@@ -1,6 +1,7 @@
 # Portfolio
 
 Página Pessoal Eduardo Rauta com algumas informações e projetos pessoais.
+Acesso: [Site](https://ebrauta.github.io/portfolio)
 
 ## 📦 Desenvolvimento
 ### 🛠️ Construído com
