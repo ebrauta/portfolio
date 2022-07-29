@@ -17,22 +17,13 @@ document.addEventListener("scroll", () => {
 });
 
 $("#curriculo").on("click", (ev) => {
-  var dialog = bootbox.dialog({
-    title:
-      "Currículo Eduardo - <span class='small text-muted'>Clique para fazer o Download</span>",
-    message: `<div class="spinner-border text-primary" role="status" aria-hidden="true"></div>
-    <span class="text-primary">Carregando...</span>
-              `,
-  });
-
-  dialog.init(function () {
-    setTimeout(function () {
-      dialog
-        .find(".bootbox-body")
-        .html(
-          "<a href='./extras/Eduardo - Desenvolvedor.pdf' download><img src='./images/curriculum.jpg' alt='Currículo' style='width:100%; max-width:500px' /></a>"
-        );
-    }, 3000);
+  Swal.fire({
+    title: "Currículo Eduardo",
+    html: "<a href='./extras/Eduardo - Desenvolvedor.pdf' download><span class='small text-muted'>Clique aqui para fazer o Download</span></a>",
+    imageUrl: "./images/curriculum.jpg",
+    imageWidth: 353,
+    imageHeight: 500,
+    imageAlt: "Curriculum",
   });
 });
 
