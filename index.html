@@ -1,125 +1,441 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desenvolvedor FullStack - Eduardo Rauta</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<html lang="en">
 
-  </head>
-  <body data-spy="scroll">
-    <header>
-      <nav>
-        <span id="brand">Eduardo Rauta</span>
-        <ul class="nav-list">
-          <li class="list-item"><a href="#services">Sobre mim</a></li>
-          <li class="list-item"><a href="#projects">Projetos</a></li>
-          <li class="list-item"><a href="#contact">Contato</a></li>
-          <li class="list-item"><a href="#" id="curriculo">Currículo</a></li>
-        </ul>
-      </nav>
-      <button id="b-button" onclick="changeBurgerButton(this)">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </button>
-      <div class="nav-burger">
-        <ul class="b-list">
-          <li class="b-list-item"><a href="#services">Sobre mim</a></li>
-          <li class="b-list-item"><a href="#projects">Projetos</a></li>
-          <li class="b-list-item"><a href="#contact">Contato</a></li>
-          <li class="b-list-item"><a href="#" id="curriculo">Currículo</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- ===== BOX ICONS ===== -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>Eduardo Rauta | Desenvolvedor</title>
+</head>
+
+<body>
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="bx bx-menu"></i>
+      </div>
+      <div>
+        <a href="#" class="nav__logo">EBR</a>
+      </div>
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__close" id="nav-close">
+          <i class="bx bx-x"></i>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">Sobre</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">Serviços</a></li>
+          <li class="nav__item"><a href="#works" class="nav__link">Trabalhos</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contato</a></li>
         </ul>
       </div>
-    </header>
-    <main class="container">
-      <button id="backToTop"><i class="fa fa-angle-double-up"></i></button>
-      <div id="background-presentation"></div>
-      <section id="presentation">
-        <article id="whofigure">
-          <figure class="perfil">
-            <img
-              class="perfil-foto"
-              src="./images/profile-gray.png"
-              alt="Eduardo Rauta"
-            />
-          </figure>
-        </article>
-        <article id="about">
-          <h2>Desenvolvedor FullStack</h2>
-          <div class="title">
-            <p>Olá, eu sou</p>
-            <h1>Eduardo Rauta</h1>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="backToTop"><i class='bx bx-up-arrow-alt'></i></button>
+    <!--===== HOME =====-->
+    <section class="home" id="home">
+      <div class="home__container bd-grid">
+        <div class="home__data">
+          <div class="home__img">
+            <img src="assets/img/perfil.png" alt="Perfil">
           </div>
-        </article>
-      </section>
-      <section id="services">
-        <h3><a name="services">Sobre mim</a></h3>
-        <ul class="sobremim">
-          <li><span class="emoticon">🎓</span> Estou no 7º Período de Ciência da Computação</li>
-          <li><span class="emoticon">🛠</span> Tive experiências com Java, JQuery e C#, além de Bancos de Dados Relacionais e Não Relacionais</li>
-          <li><span class="emoticon">💻</span> Atualmente desenvolmendo habilidades em TDD, DDD, CleanCode, entre outros...</li>
-        </ul>
-        <h4>Ferramentas que mais uso</h4>
-        <ul class="tools"></ul>
-      </section>
-      <section id="projects">
-        <h3><a name="projects">Projetos</a></h3>
-        <h4>Alguns projetos no CodePen</h4>
-       <div class="projetos accordion" id="accordionProjects">
-       </div>
-      </main>
+          <h1 class="home__title">Eduardo Rauta</h1>
+          <span class="home__profession">Desenvolvedor Fullstack</span>
+          <div class="home__social">
+            <a href="https://www.linkedin.com/in/eduardorauta/" target="_blank" class="home__social-link"><i
+                class="bx bxl-linkedin"></i></a>
+            <a href="https://www.instagram.com/ebrauta/" target="_blank" class="home__social-link"><i
+                class="bx bxl-instagram"></i></a>
+            <a href="https://www.github.com/ebrauta/" target="_blank" class="home__social-link"><i
+                class="bx bxl-github"></i></a>
+          </div>
+          <a download="Eduardo - Desenvolvedor.pdf" href="./assets/extras/Eduardo - Desenvolvedor.pdf"
+            class="button home__button">Download CV</a>
+        </div>
+      </div>
+    </section>
+    <!--===== ABOUT =====-->
+    <section class="about section" id="about">
+      <span class="section-subtitle">Introdução</span>
+      <h2 class="section-title">Sobre mim</h2>
+      <div class="about__container bd-grid">
+        <div class="about__data">
+          <br class="about__description">
+          Olá, eu sou Eduardo, sou desenvolvedor com extenso conhecimento e experiência, trabalhando com web tecnologias
+          e UI / UX
+          design, entregando trabalhos de qualidade.<br />
+          Estou no último Período de Ciência da Computação e tive experiências com Java, JQuery e C#, além de Bancos de
+          Dados Relacionais e Não Relacionais<br />
+          Atualmente desenvolmendo habilidades em TDD, DDD, CleanCode, entre outros...
+          <img src="assets/img/about.png" alt="Sobre" class="about__img">
+          </p>
+        </div>
+        <div>
+          <div class="about__information">
+            <h3 class="about__information-title">Informação</h3>
+            <div class="about__information-data">
+              <i class="bx bx-user about__information-icon"></i>
+              <span>Eduardo Rauta</span>
+            </div>
+            <div class="about__information-data">
+              <i class="bx bx-phone about__information-icon"></i>
+              <span>(27) 99944-6141</span>
+            </div>
+            <div class="about__information-data">
+              <i class="bx bx-envelope about__information-icon"></i>
+              <span>eduardo.rauta@gmail.com</span>
+            </div>
+          </div>
+          <div class="about__information">
+            <h3 class="about__information-title">Experiência</h3>
+            <div class="about__information-data">
+              <i class="bx bx-medal about__information-icon"></i>
+              <div>
+                <span class="about__information-subtitle">Aproximadamente 1 ano de</span>
+                <span class="about__information-subtitle-small">Experiência BackEnd</span>
+              </div>
+            </div>
+            <div class="about__information-data">
+              <i class="bx bx-briefcase about__information-icon"></i>
+              <div>
+                <span class="about__information-subtitle">6 Projetos</span>
+                <span class="about__information-subtitle-small">Completos</span>
+              </div>
+            </div>
+            <div class="about__information-data">
+              <i class="bx bx-support about__information-icon"></i>
+              <div>
+                <span class="about__information-subtitle">Suporte</span>
+                <span class="about__information-subtitle-small">Online 24/7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--===== SKILLS =====-->
+    <section class="skills section" id="skills">
+      <span class="section-subtitle">Por que me escolher?</span>
+      <h2 class="section-title">Minha Área de Atuação</h2>
+      <div class="skills__container bd-grid">
+        <div class="skills__content">
+          <h3 class="skills_subtitle">FrontEnd</h3>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
+              alt="JavaScript" class="skills__img">
+            <span class="skills__name">JavaScript</span>
+            <span class="skills__number">90%</span>
+            <div class="skills__bar skills__js"></div>
+          </div>
+          <div class="skills__data">
+            <div>
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                alt="HTML" class="skills__img">
+              <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                alt="CSS" class="skills__img">
+            </div>
+            <span class="skills__name">HTML/CSS</span>
+            <span class="skills__number">80%</span>
+            <div class="skills__bar skills__html"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg"
+              alt="Bootstrap" class="skills__img">
+            <span class="skills__name">Bootstrap</span>
+            <span class="skills__number">75%</span>
+            <div class="skills__bar skills__bootstrap"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"
+              alt="VueJS" class="skills__img">
+            <span class="skills__name">Vue</span>
+            <span class="skills__number">70%</span>
+            <div class="skills__bar skills__vue"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+              alt="ReactJS" class="skills__img">
+            <span class="skills__name">React</span>
+            <span class="skills__number">65%</span>
+            <div class="skills__bar skills__react"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg"
+              alt="TypeScript" class="skills__img">
+            <span class="skills__name">Typescript</span>
+            <span class="skills__number">50%</span>
+            <div class="skills__bar skills__typescript"></div>
+          </div>
+        </div>
+        <div class="skills__content">
+          <h3 class="skills_subtitle">BackEnd</h3>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+              alt="NodeJS" class="skills__img">
+            <span class="skills__name">NodeJS</span>
+            <span class="skills__number">80%</span>
+            <div class="skills__bar skills__node"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg"
+              alt="Firebase" class="skills__img">
+            <span class="skills__name">Firebase</span>
+            <span class="skills__number">80%</span>
+            <div class="skills__bar skills__firebase"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
+              alt="CSharp" class="skills__img">
+            <span class="skills__name">C#</span>
+            <span class="skills__number">65%</span>
+            <div class="skills__bar skills__csharp"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java"
+              class="skills__img">
+            <span class="skills__name">Java</span>
+            <span class="skills__number">65%</span>
+            <div class="skills__bar skills__java"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+              alt="Python" class="skills__img">
+            <span class="skills__name">Python</span>
+            <span class="skills__number">60%</span>
+            <div class="skills__bar skills__python"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+              alt="SQL" class="skills__img">
+            <span class="skills__name">SQL</span>
+            <span class="skills__number">60%</span>
+            <div class="skills__bar skills__sql"></div>
+          </div>
+          <div class="skills__data">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP"
+              class="skills__img">
+            <span class="skills__name">PHP</span>
+            <span class="skills__number">50%</span>
+            <div class="skills__bar skills__php"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--===== EDUCATION =====-->
+    <section class="education section">
+      <span class="section-subtitle">Qualificações</span>
+      <h2 class="section-title">Formação Acadêmica</h2>
+      <div class="education__container bd-grid">
+        <div class="education__content">
+          <div>
+            <h3 class="education__year">2019 - 2023</h3>
+            <span class="education__university">Universidade Cruzeiro do Sul</span>
+          </div>
+          <div class="education__time">
+            <span class="education__rounder"></span>
+            <span class="education__line"></span>
+          </div>
+          <div>
+            <h3 class="education__race">Graduação</h3>
+            <span class="education__specialty">Ciência da Computação</span>
+          </div>
+        </div>
+        <div class="education__content">
+          <div>
+            <h3 class="education__year">2013 - 2015</h3>
+            <span class="education__university">Universidade Cândido Mendes</span>
+          </div>
+          <div class="education__time">
+            <span class="education__rounder"></span>
+            <span class="education__line"></span>
+          </div>
+          <div>
+            <h3 class="education__race">Pós-Graduação</h3>
+            <span class="education__specialty">Segurança do Trabalho</span>
+          </div>
+        </div>
+        <div class="education__content">
+          <div>
+            <h3 class="education__year">2003 - 2009</h3>
+            <span class="education__university">Universidade Federal do Espírito Santo</span>
+          </div>
+          <div class="education__time">
+            <span class="education__rounder"></span>
+            <span class="education__line"></span>
+          </div>
+          <div>
+            <h3 class="education__race">Graduação</h3>
+            <span class="education__specialty">Engenharia Mecânica</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--===== SERVICES =====-->
+    <section class="services section" id="services">
+      <span class="section-subtitle">O que eu ofereço?</span>
+      <h2 class="section-title">Meus Serviços</h2>
+      <div class="services__container bd-grid">
+        <div class="services__content">
+          <i class="bx bx-code services__icon"></i>
+          <h3 class="services__title">Criação de Sites</h3>
+          <p class="services__description">Criação e desenvolvimento de sites web otimizados e profissionais</p>
+        </div>
+        <div class="services__content">
+          <i class="bx bx-server services__icon"></i>
+          <h3 class="services__title">Desenvolvimento de APIs</h3>
+          <p class="services__description">Desenvolvo API's como parte de novos projetos de desenvolvimento de software,
+            conectando e atualizando sistemas legados de nossos clientes para conectá-los com segurança à web aberta.
+          </p>
+        </div>
+        <div class="services__content">
+          <i class="bx bx-mobile services__icon"></i>
+          <h3 class="services__title">Desenvolvimento de Apps Mobile</h3>
+          <p class="services__description">Realizo o desenvolvimento de aplicativos mobile nativos, entendendo suas
+            necessidades, levantando as funcionalidades, ajudando na elaboração do escopo e desenvolvendo-o.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--===== PROJECT IN MIND =====-->
+    <section class="project section">
+      <div class="project__container bd-grid">
+        <div class="project__data">
+          <h2 class="section-title project__title">Você tem um projeto em mente?</h2>
+          <p class="project__description">Se você tem algum projeto que deseja criar</p>
+          <a href="#contact" class="button button__light">Entre em contato</a>
+        </div>
+        <img src="assets/img/projectmind.png" alt="" class="project__img">
+      </div>
+    </section>
+
+    <!--===== WORKS =====-->
+    <section class="works section" id="works">
+      <span class="section-subtitle">Meu portfolio</span>
+      <h2 class="section-title">Trabalhos Recentes</h2>
+      <div class="works__container bd-grid">
+        <div class="works__img">
+          <img src="assets/img/work1.jpg" alt="Trabalho 1">
+          <div class="works__data">
+            <a href="https://ebrauta.github.io/ControleFinanceiro/" target="_blank" class="works__link"><i
+                class="bx bx-link-alt"></i></a>
+            <span class="works__title">Controle Financeiro</span>
+          </div>
+        </div>
+        <div class="works__img">
+          <img src="assets/img/work2.jpg" alt="Trabalho 2">
+          <div class="works__data">
+            <a href="https://ebrauta.github.io/CafeteriaOnline/" target="_blank" class="works__link"><i
+                class="bx bx-link-alt"></i></a>
+            <span class="works__title">Cafeteria Online</span>
+          </div>
+        </div>
+        <div class="works__img">
+          <img src="assets/img/work3.jpg" alt="Trabalho 3">
+          <div class="works__data">
+            <a href="https://ebrauta.github.io/MVCJavascript/" target="_blank" class="works__link"><i
+                class="bx bx-link-alt"></i></a>
+            <span class="works__title">MVC Javascript</span>
+          </div>
+        </div>
+        <div class="works__img">
+          <img src="assets/img/work4.jpg" alt="Trabalho 4">
+          <div class="works__data">
+            <a href="https://ebrauta.github.io/Tabela_Periodica/" target="_blank" class="works__link"><i
+                class="bx bx-link-alt"></i></a>
+            <span class="works__title">Tabela Periódica</span>
+          </div>
+        </div>
+        <div class="works__img">
+          <img src="assets/img/work5.jpg" alt="Trabalho 5">
+          <div class="works__data">
+            <a href="https://ebrauta.github.io/CRUDJavascript/" target="_blank" class="works__link"><i
+                class="bx bx-link-alt"></i></a>
+            <span class="works__title">CRUD Javascript</span>
+          </div>
+        </div>
+        <div class="works__img">
+          <img src="assets/img/work6.jpg" alt="Trabalho 6">
+          <div class="works__data">
+            <a href="https://ebrauta.github.io/ListaDeProdutos/" target="_blank" class="works__link"><i
+                class="bx bx-link-alt"></i></a>
+            <span class="works__title">Lista de Produtos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+      <span class="section-subtitle">Contato</span>
+      <h2 class="section-title">Entre em Contato</h2>
+      <div class="contact__container bd-grid">
+        <form class="contact__form">
+          <div class="contact__inputs">
+            <input type="text" class="contact__input" placeholder="Nome">
+            <input type="email" class="contact__input" placeholder="E-mail">
+          </div>
+          <input type="text" class="contact__input" placeholder="Projeto">
+          <textarea name="" id="" cols="0" rows="10" placeholder="Mensagem" class="contact__input"></textarea>
+          <button type="submit" class="button contact__button">Enviar <i class='bx bx-send'></i></button>
+        </form>
+        <div>
+          <div class="contact__info">
+            <h3 class="contact__subtitle">
+              <i class='bx bx-phone'></i>
+              Telefone
+            </h3>
+            <span class="contact__text">+55 27 999446141</span>
+          </div>
+          <div class="contact__info">
+            <h3 class="contact__subtitle">
+              <i class='bx bx-envelope'></i>
+              E-mail
+            </h3>
+            <span class="contact__text">eduardo.rauta@gmail.com</span>
+          </div>
+          <div class="contact__info">
+            <h3 class="contact__subtitle">
+              <i class='bx bx-map'></i>
+              Localização
+            </h3>
+            <span class="contact__text">Vila Velha - ES</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--===== FOOTER =====-->
+  <footer class="footer section">
+    <div class="footer__container bd-grid">
+      <h1 class="footer__title">Eduardo</h1>
+      <p class="footer__description">Eu sou Eduardo e este é meu website pessoal, consulte-me aqui.</p>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/eduardorauta/" target="_blank" class="footer__link"><i
+            class="bx bxl-linkedin"></i></a>
+        <a href="https://www.instagram.com/ebrauta/" target="_blank" class="footer__link"><i
+            class="bx bxl-instagram"></i></a>
+        <a href="https://www.github.com/ebrauta/" target="_blank" class="footer__link"><i class="bx bxl-github"></i></a>
+      </div>
+      <p class="footer__copy">Todos direitos reservados por EBR - 2023</p>
     </div>
-      </section>
-    </main>
-    <foooter id="contact">
-      <h3>
-        <a name="contact"> Redes Sociais </a>
-      </h3>
-      <ul class="redes-sociais">
-        <li>
-          <a
-            href="https://instagram.com/eduardo.rauta"
-            title="Instagram: @eduardo.rauta"
-            target="_blank"
-          >
-            <i class="fa fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/ebrauta"
-            title="Github: @ebrauta"
-            target="_blank"
-          >
-            <i class="fa fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:ebrauta@gmail.com" title="Email" target="_blank">
-              <i class="fa fa-google"></i></li>
-          </a>
-          <li>
-            <a href="https://www.linkedin.com/in/eduardorauta/" title="LinkedIn" target="_blank">
-              <i class="fa fa-linkedin-square"></i></li>
-            </a>        
-          </li>
-      </ul>
-      <p> &copy;2022 - Eduardo B. Rauta</p>
-    </foooter>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script
-      async
-      src="https://cpwebassets.codepen.io/assets/embed/ei.js"
-    ></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="scripts/main.js"></script>
-  </body>
+  </footer>
+  <!--===== MAIN JS =====-->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
